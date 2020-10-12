@@ -1,0 +1,36 @@
+<?php return array (
+  'data' => 
+  array (
+    'systemp' => '40 ℃',
+    'cputemp' => '41 ℃',
+    'fanspeed' => '839 RPM',
+    'cpu' => '1.24%',
+    'sn' => 'T2010cHgawRle',
+    'product_name' => 'F5422',
+    'linux_version' => '4.13.16',
+    'bios_version' => 'MAPL0301V10',
+    'cpu_name' => 'Intel(R) Celeron(R) CPU J3455 @1.5GHz',
+    'mac' => 
+    array (
+      0 => '6c:bf:b5:00:dc:5b',
+      1 => '6c:bf:b5:00:dc:5c',
+      2 => '6c:bf:b5:00:dc:d0',
+    ),
+    'mt' => '4096 MB',
+    'hardware' => 
+    array (
+      0 => 'ST6000VN001-2BB186',
+    ),
+    'netface' => 
+    array (
+      'eth0' => 'Unknown!',
+      'eth1' => '1000Mb/s',
+      'eth2' => 'Unknown!',
+    ),
+    'usb' => 
+    array (
+      0 => 'USB Disk 1',
+      1 => '7.45 GB',
+    ),
+  ),
+);
