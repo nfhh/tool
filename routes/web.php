@@ -24,3 +24,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/sn', \App\Http\Livewire\Sn::class);
 Route::get('/test', \App\Http\Livewire\Test::class);
 Route::get('/weight', \App\Http\Livewire\Weight::class);
+Route::get('/product', \App\Http\Livewire\Product::class)->name('product.index');
+Route::get('/product/create', \App\Http\Livewire\ProductCreate::class)->name('product.create');
+Route::get('/product/{product}/edit', \App\Http\Livewire\ProductEdit::class)->name('product.edit');

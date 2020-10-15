@@ -3,6 +3,24 @@
         测试列表
     </div>
     <div class="card-body">
+        <form wire:submit.prevent="handleSearch" class="pb-3">
+            <div class="form-group">
+                <label for="search">关键词</label>
+                <input type="text" class="form-control" id="search" wire:model.defer="search">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="start_date">开始日期</label>
+                    <input type="date" class="form-control" id="start_date" wire:model.defer="start_date">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="end_date">结束日期</label>
+                    <input type="date" class="form-control" id="end_date" wire:model.defer="end_date">
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">搜索</button>
+        </form>
+
         <div class="table-responsive">
             <table class="table table-hover">
                 <thead>

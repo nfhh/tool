@@ -3,9 +3,9 @@
   array (
     'systemp' => '40 ℃',
     'cputemp' => '41 ℃',
-    'fanspeed' => '839 RPM',
-    'cpu' => '1.24%',
-    'sn' => 'T2010cHgawRle',
+    'fanspeed' => '845 RPM',
+    'cpu' => '1%',
+    'sn' => 'T2010T4kRW9Zo',
     'product_name' => 'F5422',
     'linux_version' => '4.13.16',
     'bios_version' => 'MAPL0301V10',

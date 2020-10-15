@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWeightsTable extends Migration
+class CreateProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateWeightsTable extends Migration
      */
     public function up()
     {
-        Schema::create('weights', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('weight')->default('');
-            $table->string('sn')->unique();
-            $table->unsignedTinyInteger('result')->default(0);
-            $table->unsignedBigInteger('product_id')->default(0);
+            $table->string('name')->unique();
+            $table->unsignedInteger('guess_val')->default(0);
+            $table->unsignedInteger('diff_val')->default(0);
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateWeightsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('weights');
+        Schema::dropIfExists('products');
     }
 }

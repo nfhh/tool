@@ -31,7 +31,7 @@ class Sn extends Component
 
     private function alg()
     {
-        return 'T' . substr(now()->year, 2) . sprintf("%02d", now()->month) . Str::random(8);
+        return Str::random(13);
     }
 
     public function render()
