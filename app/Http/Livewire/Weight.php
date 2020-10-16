@@ -2,11 +2,13 @@
 
 namespace App\Http\Livewire;
 
+use App\Exports\WeightExport;
+use App\Models\Product as ProductModel;
 use App\Models\Weight as WeightModel;
 use Illuminate\Database\Eloquent\Builder;
 use Livewire\Component;
 use Livewire\WithPagination;
-use App\Models\Product as ProductModel;
+use Maatwebsite\Excel\Facades\Excel;
 
 class Weight extends Component
 {
@@ -80,7 +82,7 @@ class Weight extends Component
 
     public function export()
     {
-        return (collect($this->excel_sns))->downloadExcel('SN.xlsx');
+        return Excel::download(new WeightExport($this->start_date, $this->end_date, $this->search), 'weight.xlsx');
     }
 
     public function render()

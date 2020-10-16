@@ -19,6 +19,7 @@
                 </div>
             </div>
             <button class="btn btn-primary" type="submit">搜索</button>
+            <button class="btn btn-primary" wire:click="export">导出</button>
         </form>
         <x-success></x-success>
         <form class="pb-3" wire:submit.prevent="store" x-data @weight-saved.window="$refs.foo.focus()">

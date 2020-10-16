@@ -19,6 +19,7 @@
                 </div>
             </div>
             <button class="btn btn-primary" type="submit">搜索</button>
+            <button class="btn btn-primary" wire:click="export">导出</button>
         </form>
 
         <div class="table-responsive">

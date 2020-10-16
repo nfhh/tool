@@ -1,47 +1,31 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Exports;
 
-use App\Exports\TestExport;
 use App\Models\Test as TestModel;
+use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Builder;
-use Livewire\Component;
-use Livewire\WithPagination;
-use Maatwebsite\Excel\Facades\Excel;
+use Maatwebsite\Excel\Concerns\FromView;
 
-class Test extends Component
+class TestExport implements FromView
 {
-    use WithPagination;
 
-    protected $paginationTheme = 'bootstrap';
+    private $start_date;
+    private $end_date;
+    private $search;
 
-    public $search = '';
-    public $start_date = '';
-    public $end_date = '';
-    public $page = 1;
-
-    protected $queryString = [
-        'search' => ['except' => ''],
-        'start_date' => ['except' => ''],
-        'end_date' => ['except' => ''],
-        'page' => ['except' => 1],
-    ];
-
-    public function mount()
+    public function __construct($start_date, $end_date, $search)
     {
-        $this->fill(request()->only('search', 'page'));
+        $this->start_date = $start_date;
+        $this->end_date = $end_date;
+        $this->search = $search;
     }
 
-    public function export()
+    public function view(): View
     {
-        return Excel::download(new TestExport($this->start_date, $this->end_date, $this->search), 'tests.xlsx');
-    }
-
-    public function render()
-    {
-        return view('livewire.test', [
+        return view('exports.test', [
             'tests' => $this->handleSearch()->paginate(20),
-        ])->extends('layouts.dashboard')->section('body');
+        ]);
     }
 
     protected function buildWhereAnd()

@@ -24,11 +24,11 @@ class CreateTestsTable extends Migration
             $table->string('linux_version')->default('')->comment('内核版本');
             $table->string('bios_version')->default('')->comment('BIOS版本');
             $table->string('cpu_name')->default('')->comment('CPU型号');
-            $table->json('mac')->comment('MAC地址');
+            $table->string('mac')->comment('MAC地址');
             $table->string('mt')->default('')->comment('内存容量');
-            $table->json('hardware')->comment('硬盘型号');
-            $table->json('netface')->comment('网络接口');
-            $table->json('usb')->comment('外接U盘');
+            $table->string('hardware')->comment('硬盘型号');
+            $table->string('netface')->comment('网络接口');
+            $table->string('usb')->comment('外接U盘');
             $table->timestamps();
         });
     }
