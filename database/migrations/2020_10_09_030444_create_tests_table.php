@@ -29,6 +29,7 @@ class CreateTestsTable extends Migration
             $table->string('hardware')->comment('硬盘型号');
             $table->string('netface')->comment('网络接口');
             $table->string('usb')->comment('外接U盘');
+            $table->string('check')->comment('脚本测试结果');
             $table->timestamps();
         });
     }
