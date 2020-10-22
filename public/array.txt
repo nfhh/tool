@@ -1,11 +1,11 @@
 <?php return array (
   'data' => 
   array (
-    'systemp' => '40 ℃',
-    'cputemp' => '41 ℃',
-    'fanspeed' => '845 RPM',
-    'cpu' => '1%',
-    'sn' => 'T2010T4kRW9Zo',
+    'systemp' => '37 ℃',
+    'cputemp' => '39 ℃',
+    'fanspeed' => '1268 RPM',
+    'cpu' => '0.99%',
+    'sn' => 'T20105u2bp7lX',
     'product_name' => 'F5422',
     'linux_version' => '4.13.16',
     'bios_version' => 'MAPL0301V10',
@@ -30,7 +30,8 @@
     'usb' => 
     array (
       0 => 'USB Disk 1',
-      1 => '7.45 GB',
+      1 => '(7.45 GB)',
     ),
+    'check' => '读硬盘速度 error',
   ),
 );

@@ -41,6 +41,7 @@
                     <th scope="col">硬盘型号</th>
                     <th scope="col">外接U盘</th>
                     <th scope="col">网络接口</th>
+                    <th scope="col">脚本检测</th>
                     <th scope="col">添加时间</th>
                 </tr>
                 </thead>
@@ -74,6 +75,7 @@
                                 {{ $k }} : {{ $v }} <br/>
                             @endforeach
                         </td>
+                        <td>{{ $test->check }}</td>
                         <td>{{ $test->created_at }}</td>
                     </tr>
                 @endforeach
