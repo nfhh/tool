@@ -42,7 +42,7 @@
                 </td>
                 <td>
                     @foreach(json_decode($test->usb,true) as $it)
-                        {{ $it }} <br/>
+                        {{ $it['devicename'] }} ：{{ $it['size'] }}<br/>
                     @endforeach
                 </td>
                 <td>
