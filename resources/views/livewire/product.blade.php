@@ -16,6 +16,7 @@
                     <th scope="col">产品标准重量（g）</th>
                     <th scope="col">重量误差范围（g）</th>
                     <th scope="col">添加时间</th>
+                    <th scope="col">编辑时间</th>
                     <th scope="col">操作</th>
                 </tr>
                 </thead>
@@ -27,6 +28,7 @@
                         <td>{{ $product->guess_val }} 克</td>
                         <td>{{ $product->diff_val }} 克</td>
                         <td>{{ $product->created_at }}</td>
+                        <td>{{ $product->updated_at }}</td>
                         <td>
                             <div class="btn-group" role="group">
                                 <a href="{{ route('product.edit',$product->id) }}" class="btn btn-primary">编辑</a>
