@@ -31,7 +31,7 @@ class Sn extends Component
 
     private function alg()
     {
-        return Str::random(13);
+        return strtoupper(Str::random(13));
     }
 
     public function render()
