@@ -22,7 +22,7 @@
                 <tbody>
                 @foreach ($products as $product)
                     <tr>
-                        <th scope="row">{{ $product->id }}</th>
+                        <th scope="row">{{ $loop->iteration }}</th>
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->guess_val }} 克</td>
                         <td>{{ $product->diff_val }} 克</td>
