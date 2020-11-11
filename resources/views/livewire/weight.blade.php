@@ -33,15 +33,15 @@
                     </select>
                 </div>
                 <div class="form-group col-md-3">
-                    <label>预设值</label>
+                    <label>产品标准重量（g）</label>
                     <input type="text" readonly class="form-control-plaintext" value="{{ $guess_val }}">
                 </div>
                 <div class="form-group col-md-3">
-                    <label>误差值</label>
+                    <label>重量误差范围（g）</label>
                     <input type="text" readonly class="form-control-plaintext" value="{{ $diff_val }}">
                 </div>
                 <div class="form-group col-md-3">
-                    <label>实际值</label>
+                    <label>实际值（g）</label>
                     <input type="text" class="form-control" wire:model.defer="form.weight">
                 </div>
             </div>
@@ -62,9 +62,9 @@
                 <tr>
                     <th scope="col">序号</th>
                     <th scope="col">型号</th>
-                    <th scope="col">预设值</th>
-                    <th scope="col">误差值</th>
-                    <th scope="col">实际值</th>
+                    <th scope="col">产品标准重量（g）</th>
+                    <th scope="col">重量误差范围（g）</th>
+                    <th scope="col">实际值（g）</th>
                     <th scope="col">SN</th>
                     <th scope="col">结果</th>
                     <th scope="col">添加时间</th>

@@ -9,11 +9,11 @@
                 <input type="text" class="form-control" id="name" wire:model.defer="form.name" required>
             </div>
             <div class="form-group">
-                <label for="guess_val">预设值</label>
+                <label for="guess_val">产品标准重量（g）</label>
                 <input type="text" class="form-control" id="guess_val" wire:model.defer="form.guess_val" required>
             </div>
             <div class="form-group">
-                <label for="diff_val">误差值</label>
+                <label for="diff_val">重量误差范围（g）</label>
                 <input type="text" class="form-control" id="diff_val" wire:model.defer="form.diff_val" required>
             </div>
             <button type="submit" class="btn btn-primary">确定</button>

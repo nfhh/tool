@@ -13,8 +13,8 @@
                 <tr>
                     <th scope="col">序号</th>
                     <th scope="col">型号</th>
-                    <th scope="col">预设值</th>
-                    <th scope="col">误差值</th>
+                    <th scope="col">产品标准重量（g）</th>
+                    <th scope="col">重量误差范围（g）</th>
                     <th scope="col">添加时间</th>
                     <th scope="col">操作</th>
                 </tr>
