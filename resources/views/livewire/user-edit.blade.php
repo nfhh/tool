@@ -10,7 +10,7 @@
             </div>
             <div class="form-group">
                 <label for="password">密码</label>
-                <input type="password" class="form-control" id="password" wire:model.defer="form.password" required>
+                <input type="password" class="form-control" id="password" wire:model.defer="form.password">
             </div>
             <button type="submit" class="btn btn-primary">确定</button>
         </form>
