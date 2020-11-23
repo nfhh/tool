@@ -21,6 +21,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/user', \App\Http\Livewire\User::class)->name('user.index');
+Route::get('/user/create', \App\Http\Livewire\UserCreate::class)->name('user.create');
+Route::get('/user/{user}/edit', \App\Http\Livewire\UserEdit::class)->name('user.edit');
 Route::get('/sn', \App\Http\Livewire\Sn::class);
 Route::get('/test', \App\Http\Livewire\Test::class);
 Route::get('/weight', \App\Http\Livewire\Weight::class);

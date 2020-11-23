@@ -3,6 +3,7 @@
         <thead>
         <tr>
             <th scope="col">序号</th>
+            <th scope="col">测试人</th>
             <th scope="col">设备SN</th>
             <th scope="col">设备型号</th>
             <th scope="col">内核版本</th>
@@ -23,33 +24,31 @@
         <tbody>
         @foreach ($tests as $test)
             <tr>
-                <th scope="row">{{ $test->id }}</th>
+                <th scope="row">{{ $loop->iteration }}</th>
+                <td>{{ $test->user->name }}</td>
                 <td>{{ $test->sn }}</td>
-                <td>{{ $test->product_name }}</td>
-                <td>{{ $test->linux_version }}</td>
+                <td>{{ $test->model }}</td>
+                <td>{{ $test->kernel_version }}</td>
                 <td>{{ $test->bios_version }}</td>
-                <td>{{ $test->cpu_name }}</td>
-                <td>{{ $test->cputemp }}</td>
                 <td>{{ $test->cpu }}</td>
-                <td>{!! implode('<br/>', json_decode($test->mac,true)) !!}</td>
-                <td>{{ $test->fanspeed }}</td>
-                <td>{{ $test->mt }}</td>
-                <td>{{ $test->systemp }}</td>
+                <td>{{ $test->cpu_temp }}</td>
+                <td>{{ $test->cpu_used }}</td>
+                <td>{!! implode('<br/>', $test->mac) !!}</td>
+                <td>{{ $test->fan_speed }}</td>
+                <td>{{ $test->ram }}</td>
+                <td>{{ $test->nas_temp }}</td>
+                <td>{!! implode('<br/>', $test->disk) !!}</td>
                 <td>
-                    @foreach(json_decode($test->hardware,true) as $it)
-                        {{ $it }} <br/>
-                    @endforeach
-                </td>
-                <td>
-                    @foreach(json_decode($test->usb,true) as $it)
+                    @foreach($test->u_disk as $it)
                         {{ $it['devicename'] }} ：{{ $it['size'] }}<br/>
                     @endforeach
                 </td>
                 <td>
-                    @foreach(json_decode($test->netface,true) as $k=>$v)
+                    @foreach($test->net as $k=>$v)
                         {{ $k }} : {{ $v }} <br/>
                     @endforeach
                 </td>
+                <td>{!! implode('<br/>', $test->shell_res) !!}</td>
                 <td>{{ $test->created_at }}</td>
             </tr>
         @endforeach

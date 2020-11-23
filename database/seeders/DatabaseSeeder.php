@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         \App\Models\User::create([
             'name' => 'terraadmin',
-            'password' => bcrypt('Terra0755'),
+            'password' => 'Terra0755',
+            'role' => 1,
         ]);
     }
 }
