@@ -24,9 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c42ba5f4-057d-4a05-947d-212429096e68" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/user-create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/user-create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/user-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/user-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/_left.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/_left.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,6 +171,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/exports" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -218,7 +219,13 @@
       <workItem from="1605076083054" duration="1085000" />
       <workItem from="1605755895383" duration="17755000" />
       <workItem from="1605834573517" duration="9285000" />
-      <workItem from="1606094193675" duration="2746000" />
+      <workItem from="1606094193675" duration="3355000" />
+      <workItem from="1606715640228" duration="39000" />
+      <workItem from="1606900806431" duration="124000" />
+      <workItem from="1606902401006" duration="1907000" />
+      <workItem from="1606957788239" duration="1526000" />
+      <workItem from="1607910780534" duration="3251000" />
+      <workItem from="1608174113478" duration="748000" />
     </task>
     <servers />
   </component>
@@ -236,43 +243,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="761" y="200" key="#com.intellij.ide.util.MemberChooser" timestamp="1602760212640">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="761" y="200" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602760212640" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605761275921">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605761275921" />
-    <state x="776" y="443" key="NewPhpFileDialog" timestamp="1602760861621">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="776" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602760861621" />
-    <state x="681" y="261" width="540" height="524" key="StructurePopup" timestamp="1601255527385">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="681" y="261" width="540" height="524" key="StructurePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1601255527385" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1606104033804">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1606104033804" />
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602725366068">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602725366068" />
-    <state x="156" y="252" width="1507" height="536" key="find.popup" timestamp="1606094674199">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="156" y="252" width="1507" height="536" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606094674199" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1601267124579">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601267124579" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606103644855">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606103644855" />
   </component>
 </project>
