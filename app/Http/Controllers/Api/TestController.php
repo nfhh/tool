@@ -11,7 +11,7 @@ class TestController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $sn = $data['sn'];
+        $sn = $data['postData']['sn'];
         if(Test::where('sn',$sn)->first()){
             return response()->json([
                 'code' => -1,
