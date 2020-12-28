@@ -129,6 +129,17 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/1f" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/4a" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/5d" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/5f" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/12" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/47" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/96" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/c9" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/d7" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/d9" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
