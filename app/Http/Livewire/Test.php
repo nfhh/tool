@@ -40,7 +40,7 @@ class Test extends Component
     public function render()
     {
         return view('livewire.test', [
-            'tests' => $this->handleSearch()->paginate(20),
+            'tests' => $this->handleSearch()->latest()->paginate(20),
         ])->extends('layouts.dashboard')->section('body');
     }
 
