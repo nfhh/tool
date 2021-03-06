@@ -13,11 +13,7 @@ class Test extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'mac' => 'array',
-        'disk' => 'array',
-        'net' => 'array',
-        'u_disk' => 'array',
-        'shell_res' => 'array',
+        'result' => 'array',
     ];
 
     public function findAllFields()

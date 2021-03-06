@@ -42,7 +42,7 @@
                     <th scope="col">硬盘型号</th>
                     <th scope="col">外接U盘</th>
                     <th scope="col">网络接口</th>
-                    <th scope="col">脚本检测</th>
+                    <th scope="col">结果</th>
                     <th scope="col">添加时间</th>
                 </tr>
                 </thead>
@@ -52,28 +52,68 @@
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>{{ $test->user->name }}</td>
                         <td>{{ $test->sn }}</td>
-                        <td>{{ $test->model }}</td>
-                        <td>{{ $test->kernel_version }}</td>
-                        <td>{{ $test->bios_version }}</td>
-                        <td>{{ $test->cpu }}</td>
-                        <td>{{ $test->cpu_temp }}</td>
-                        <td>{{ $test->cpu_used }}</td>
-                        <td>{!! implode('<br/>', $test->mac) !!}</td>
-                        <td>{{ $test->fan_speed }}</td>
-                        <td>{{ $test->ram }}</td>
-                        <td>{{ $test->nas_temp }}</td>
-                        <td>{!! implode('<br/>', $test->disk) !!}</td>
                         <td>
-                            @foreach($test->u_disk as $it)
-                                {{ $it['devicename'] }} ：{{ $it['size'] }}<br/>
+                            {{ $test->result['model']['res'] }} <span
+                                class="{{$test->result['model']['is_ok'] === 'PASS' ? 'text-success' : 'text-danger' }}">{{ $test->result['model']['is_ok'] }}</span>
+                        </td>
+                        <td>
+                            {{ $test->result['kernel_version']['res'] }} <span
+                                class="{{$test->result['kernel_version']['is_ok'] === 'PASS' ? 'text-success' : 'text-danger' }}">{{ $test->result['kernel_version']['is_ok'] }}</span>
+                        </td>
+                        <td>
+                            {{ $test->result['bios_version']['res'] }} <span
+                                class="{{$test->result['bios_version']['is_ok'] === 'PASS' ? 'text-success' : 'text-danger' }}">{{ $test->result['bios_version']['is_ok'] }}</span>
+                        </td>
+                        <td>
+                            {{ $test->result['cpu']['res'] }} <span
+                                class="{{$test->result['cpu']['is_ok'] === 'PASS' ? 'text-success' : 'text-danger' }}">{{ $test->result['cpu']['is_ok'] }}</span>
+                        </td>
+                        <td>
+                            {{ $test->result['cpu_temp']['res'] }} <span
+                                class="{{$test->result['cpu_temp']['is_ok'] === 'PASS' ? 'text-success' : 'text-danger' }}">{{ $test->result['cpu_temp']['is_ok'] }}</span>
+                        </td>
+                        <td>
+                            {{ $test->result['cpu_used']['res'] }} <span
+                                class="{{$test->result['cpu_used']['is_ok'] === 'PASS' ? 'text-success' : 'text-danger' }}">{{ $test->result['cpu_used']['is_ok'] }}</span>
+                        </td>
+                        <td>
+                            @foreach($test->result['mac'] as $v)
+                                {{ $v['res'] }} <span
+                                    class="{{$v['is_ok'] === 'PASS' ? 'text-success' : 'text-danger' }}">{{ $v['is_ok'] }}</span>
+                                <br/>
                             @endforeach
                         </td>
                         <td>
-                            @foreach($test->net as $k=>$v)
-                                {{ $k }} : {{ $v }} <br/>
-                            @endforeach
+                            {{ $test->result['fan_speed']['res'] }} <span
+                                class="{{$test->result['fan_speed']['is_ok'] === 'PASS' ? 'text-success' : 'text-danger' }}">{{ $test->result['fan_speed']['is_ok'] }}</span>
                         </td>
-                        <td>{!! implode('<br/>', $test->shell_res) !!}</td>
+                        <td>
+                            {{ $test->result['ram']['res'] }} <span
+                                class="{{$test->result['ram']['is_ok'] === 'PASS' ? 'text-success' : 'text-danger' }}">{{ $test->result['ram']['is_ok'] }}</span>
+                        </td>
+                        <td>
+                            {{ $test->result['nas_temp']['res'] }} <span
+                                class="{{$test->result['nas_temp']['is_ok'] === 'PASS' ? 'text-success' : 'text-danger' }}">{{ $test->result['nas_temp']['is_ok'] }}</span>
+                        </td>
+                        <td>
+                            {!! implode('<br/>',$test->result['disk']['res']) !!}
+                            <span
+                                class="{{ \Illuminate\Support\Str::contains($test->result['disk']['is_ok'],'PASS') ? 'text-success' : 'text-danger' }}">{{ $test->result['disk']['is_ok'] }}</span>
+                        </td>
+                        <td>
+                            {!! implode('<br/>',$test->result['u_disk']['res']) !!}
+                            <span
+                                class="{{$test->result['u_disk']['is_ok'] === 'PASS' ? 'text-success' : 'text-danger' }}">{{ $test->result['u_disk']['is_ok'] }}</span>
+                        </td>
+                        <td>
+                            {!! implode('<br/>',$test->result['net']['res']) !!}
+                            <span
+                                class="{{ \Illuminate\Support\Str::contains($test->result['net']['is_ok'],'PASS') ? 'text-success' : 'text-danger' }}">{{ $test->result['net']['is_ok'] }}</span>
+                        </td>
+                        <td>
+                            <strong
+                                class="{{$test->finished === 'PASS' ? 'text-success' : 'text-danger' }}">{{ $test->finished }}</strong>
+                        </td>
                         <td>{{ $test->created_at }}</td>
                     </tr>
                 @endforeach

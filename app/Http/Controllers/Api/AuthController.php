@@ -11,7 +11,11 @@ class AuthController extends Controller
         $credentials = request(['name', 'password']);
 
         if (!$token = auth('api')->attempt($credentials)) {
-            return response()->json(['error' => 'Unauthorized'], 401);
+            return response()->json([
+                'code' => 0,
+                'message' => 'Unauthorized',
+                'data' => null
+            ], 401);
         }
 
         return $this->respondWithToken($token);
@@ -19,14 +23,25 @@ class AuthController extends Controller
 
     public function me()
     {
-        return response()->json(auth('api')->user());
+        return response()->json([
+            'code' => 0,
+            'message' => '',
+            'data' => [
+                'logined' => true,
+                'user' => auth('api')->user(),
+            ]
+        ]);
     }
 
     public function logout()
     {
         auth('api')->logout();
 
-        return response()->json(['message' => 'Successfully logged out']);
+        return response()->json([
+            'code' => 0,
+            'message' => '退出成功！',
+            'data' => null
+        ]);
     }
 
     public function refresh()
@@ -37,9 +52,12 @@ class AuthController extends Controller
     protected function respondWithToken($token)
     {
         return response()->json([
-            'access_token' => $token,
-            'token_type' => 'bearer',
-            'expires_in' => auth('api')->factory()->getTTL() * 60
+            'code' => 0,
+            'message' => '',
+            'data' => [
+                'access_token' => $token,
+                'token_type' => 'bearer'
+            ]
         ]);
     }
 }
